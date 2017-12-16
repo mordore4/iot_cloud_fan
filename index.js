@@ -29,6 +29,7 @@ const database = require('./server/persistence/mysql');
 //routes
 const api = require('./server/routes/api');
 app.use('/api', api);
+app.get('/', (req, res) => {res.render("index")});
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
